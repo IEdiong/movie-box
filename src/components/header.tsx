@@ -7,6 +7,7 @@ import {
   VStack,
 } from '@/utils/chakra-components';
 import { PlayIcon } from './icons';
+import Navbar from './navbar';
 
 export default function Header() {
   return (
@@ -17,7 +18,9 @@ export default function Header() {
       bgImage={{ lg: "url('/bg-poster.jpg')" }}
       bgRepeat='no-repeat'
       bgSize='cover'
+      pos='relative'
     >
+      <Navbar />
       <Container pt={{ lg: '158px' }}>
         <VStack
           maxW={{ lg: '404px' }}
