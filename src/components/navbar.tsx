@@ -22,8 +22,15 @@ export default function Navbar() {
     >
       <Container>
         <HStack justify='space-between'>
-          <Image src='/logo.svg' alt='' />
-          <Box minW='505px'>
+          <Image
+            src='/logo.svg'
+            alt=''
+            w={{ base: '150px', md: 'max-content' }}
+          />
+          <Box
+            minW={{ sm: '300px', md: '505px' }}
+            display={{ base: 'none', sm: 'block' }}
+          >
             <SearchBar />
           </Box>
           <HStack spacing='27px'>
