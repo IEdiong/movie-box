@@ -24,8 +24,8 @@ const Heading = defineStyleConfig({
       fontStyle: 'normal',
     },
     'h2-sm': {
-      fontSize: '2xl',
-      letterSpacing: '1px',
+      fontSize: '3xl',
+      // letterSpacing: '1px',
     },
   },
   // The default `size` or `variant` values

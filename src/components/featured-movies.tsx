@@ -9,10 +9,10 @@ export default function FeaturedMovies() {
       as='ul'
       listStyleType='none'
       gridTemplateColumns={{
-        lg: 'repeat(auto-fill, minmax(250px, 1fr))',
+        base: 'repeat(auto-fill, minmax(250px, 1fr))',
       }}
-      gridRowGap={{ lg: '103px' }}
-      gridColumnGap={{ lg: '70px' }}
+      gridRowGap={{ base: '8', md: '103px' }}
+      gridColumnGap={{ base: '40px', md: '70px' }}
       justifyContent='space-between'
     >
       {movies.map((movie) => (
