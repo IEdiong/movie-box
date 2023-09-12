@@ -6,7 +6,7 @@ import {
   VStack,
   Text,
 } from '@/utils/chakra-components';
-import { FacebookIcon, TwitterIcon } from './icons';
+import { FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from './icons';
 
 export default function Footer() {
   return (
@@ -20,9 +20,9 @@ export default function Footer() {
           justify='space-between'
         >
           <FacebookIcon boxSize='28px' />
-          <FacebookIcon boxSize='28px' />
+          <InstagramIcon boxSize='28px' />
           <TwitterIcon boxSize='28px' />
-          <FacebookIcon boxSize='28px' />
+          <YoutubeIcon boxSize='28px' />
         </HStack>
         <HStack
           as='ul'
