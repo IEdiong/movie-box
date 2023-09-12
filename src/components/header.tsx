@@ -16,23 +16,24 @@ export default function Header() {
     <Box
       as='header'
       color='mdb.white'
-      minH={{ md: '600px' }}
+      minH={{ base: '600px' }}
       bgImage={{ base: "url('/bg-poster.jpg')" }}
       bgRepeat='no-repeat'
       bgSize='cover'
+      bgPos='center'
       pos='relative'
     >
       <Navbar />
       {/* <Box pos='absolute' top='0' left='0' right='0' w='full' h='full'>
         <Carousel />
       </Box> */}
-      <Container pt={{ base: '158px' }}>
+      <Container pt={{ base: '180px', md: '158px' }}>
         <VStack
           maxW={{ base: '404px' }}
           spacing={{ base: '4' }}
           align={{ base: 'flex-start' }}
         >
-          <Heading as='h1' variant='h1'>
+          <Heading as='h1' variant={{ base: 'h1-sm', md: 'h1' }}>
             John Wick 3 : Parabellum
           </Heading>
           <HStack spacing='34px' align='center'>
@@ -46,7 +47,7 @@ export default function Header() {
             </HStack>
           </HStack>
           <Text
-            w={{ base: '345px' }}
+            w={{ base: '300px', md: '345px' }}
             fontWeight='medium'
             fontStyle='normal'
             lineHeight='18px'
