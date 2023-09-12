@@ -5,6 +5,7 @@ import {
   Text,
   Heading,
   Link,
+  Image,
 } from '@/utils/chakra-components';
 import {
   FavoriteIcon,
@@ -13,21 +14,55 @@ import {
   TvSeriesBadgeIcon,
 } from './icons';
 
-export default function MovieCard() {
+type MovieCardProps = {
+  moviePoster: string;
+  movieTitle: string;
+  movieRating: number;
+  releaseDate: string;
+};
+
+export default function MovieCard({
+  moviePoster,
+  movieTitle,
+  movieRating,
+  releaseDate,
+}: MovieCardProps) {
+  const moviePosterPath = `https://image.tmdb.org/t/p/original${moviePoster}`;
+
+  const dateString = releaseDate.split('-')[0];
+  const releaseYear = parseInt(dateString);
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+
   return (
-    <Box h='490px' as={Link} href='#' _hover={{ textDecor: 'none' }}>
-      <Box
-        p='4'
-        minH='370px'
-        bgImg={"url('/poster-image.png')"}
-        bgRepeat='no-repeat'
-        bgPos='center'
-        bgSize='cover'
-      >
-        <HStack justify='space-between' align='center'>
-          <TvSeriesBadgeIcon />
-          <FavoriteIcon />
+    <Box
+      h='490px'
+      as={Link}
+      href='#'
+      _hover={{ textDecor: 'none' }}
+      data-testid='movie-card'
+    >
+      <Box minH='370px' aspectRatio={'4 / 6'} pos='relative'>
+        <HStack
+          justify='space-between'
+          align='center'
+          p='4'
+          pos='absolute'
+          w='full'
+          left='0'
+          top='0'
+        >
+          <TvSeriesBadgeIcon visibility='hidden' />
+          <FavoriteIcon zIndex='4' />
         </HStack>
+
+        <Image
+          src={moviePosterPath}
+          objectFit='cover'
+          alt={movieTitle}
+          data-testid='movie-poster'
+        />
       </Box>
       <VStack align='flex-start' justify='space-between' spacing='3' mt='3'>
         <Text
@@ -36,10 +71,17 @@ export default function MovieCard() {
           fontWeight='bold'
           lineHeight='normal'
         >
-          USA, 2016 - Current
+          USA, <span data-testid='movie-release-date'>{releaseYear}</span>
+          {releaseYear === currentYear ? ' - Current' : null}
         </Text>
-        <Heading as='h3' variant='h3' color='mdb.gray.900' noOfLines={1}>
-          Stranger Things
+        <Heading
+          as='h3'
+          variant='h3'
+          color='mdb.gray.900'
+          noOfLines={1}
+          data-testid='movie-title'
+        >
+          {movieTitle}
           {/* Spider-Man : Into The Spider Verse */}
         </Heading>
         <HStack
@@ -51,7 +93,7 @@ export default function MovieCard() {
         >
           <HStack spacing='10px' align='center'>
             <ImdbIcon w='35px' />
-            <Text fontSize='xs'>86.0 / 100</Text>
+            <Text fontSize='xs'>{movieRating.toFixed(2)} / 100</Text>
           </HStack>
           <HStack spacing='10px' align='center'>
             <TomatoRatingIcon w='17px' />
@@ -70,5 +112,3 @@ export default function MovieCard() {
     </Box>
   );
 }
-
-// bgColor: bg='mdb.rose.700'

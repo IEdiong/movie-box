@@ -17,6 +17,7 @@ export default function Header() {
       as='header'
       color='mdb.white'
       minH={{ base: '600px' }}
+      bgColor='mdb.rose.700'
       bgImage={{ base: "url('/bg-poster.jpg')" }}
       bgRepeat='no-repeat'
       bgSize='cover'
