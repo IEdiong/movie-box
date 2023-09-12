@@ -9,6 +9,7 @@ import {
 } from '@/utils/chakra-components';
 import { ImdbIcon, PlayIcon, TomatoRatingIcon } from './icons';
 import Navbar from './navbar';
+import Carousel from './carousel';
 
 export default function Header() {
   return (
@@ -22,6 +23,9 @@ export default function Header() {
       pos='relative'
     >
       <Navbar />
+      {/* <Box pos='absolute' top='0' left='0' right='0' w='full' h='full'>
+        <Carousel />
+      </Box> */}
       <Container pt={{ lg: '158px' }}>
         <VStack
           maxW={{ lg: '404px' }}
