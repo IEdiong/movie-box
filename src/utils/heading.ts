@@ -2,12 +2,11 @@ import { defineStyleConfig } from '@chakra-ui/react';
 
 const Heading = defineStyleConfig({
   // Styles for the base style
-  // baseStyle: {
-  //   textTransform: 'uppercase',
-  //   fontWeight: 'bold',
-  //   fontFamily: 'inherit',
-  //   lineHeight: 'normal',
-  // },
+  baseStyle: {
+    fontWeight: 'bold',
+    fontFamily: 'inherit',
+    lineHeight: 'normal',
+  },
   // Styles for the visual style variations
   variants: {
     h1: {
@@ -20,9 +19,9 @@ const Heading = defineStyleConfig({
       letterSpacing: '1.286px',
     },
     h2: {
-      fontSize: '5xl',
-      lineHeight: '44px',
-      letterSpacing: '1.429px',
+      fontSize: '4xl',
+      lineHeight: 'normal',
+      fontStyle: 'normal',
     },
     'h2-sm': {
       fontSize: '2xl',

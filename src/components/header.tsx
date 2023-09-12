@@ -24,7 +24,9 @@ export default function Header() {
           spacing={{ lg: '4' }}
           align={{ lg: 'flex-start' }}
         >
-          <Heading variant='h1'>John Wick 3 : Parabellum</Heading>
+          <Heading as='h1' variant='h1'>
+            John Wick 3 : Parabellum
+          </Heading>
           <Text
             w={{ lg: '345px' }}
             fontWeight='medium'
