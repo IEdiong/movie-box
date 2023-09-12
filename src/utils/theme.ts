@@ -7,11 +7,10 @@ const colors = {
   mdb: {
     rose: {
       700: '#BE123C',
-      100: '#D87D4A',
     },
-    neutral: {
-      50: '#FAFAFA',
-      100: '#F1F1F1',
+    gray: {
+      500: '#6B7280',
+      900: '#111827',
     },
     white: '#FFFFFF',
     black: {

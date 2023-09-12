@@ -1,4 +1,5 @@
 import FeaturedMovies from '@/components/featured-movies';
+import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { ChevronRightIcon } from '@/components/icons';
 
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <Fragment>
       <Header />
-      <Box as='main' pt={{ lg: '70px' }}>
+      <Box as='main' pt={{ lg: '70px' }} pb={{ lg: '144px' }}>
         <Container>
           <HStack justify='space-between' align='center'>
             <Heading as='h2'>Featured Movies</Heading>
@@ -30,6 +31,7 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
+      <Footer />
     </Fragment>
   );
 }
