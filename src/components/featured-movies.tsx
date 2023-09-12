@@ -12,12 +12,13 @@ export default function FeaturedMovies() {
         base: 'repeat(auto-fill, minmax(250px, 1fr))',
       }}
       gridRowGap={{ base: '8', md: '103px' }}
-      gridColumnGap={{ base: '40px', md: '70px' }}
+      gridColumnGap={{ base: '40px', lg: '70px' }}
       justifyContent='space-between'
     >
       {movies.map((movie) => (
         <GridItem as='li' key={movie}>
-          <Skeleton h='490px' />
+          {/* <Skeleton h='490px' /> */}
+          <MovieCard />
         </GridItem>
       ))}
     </Grid>

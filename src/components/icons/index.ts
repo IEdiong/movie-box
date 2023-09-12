@@ -7,3 +7,5 @@ export { default as SearchIcon } from './search-icon';
 export { default as ChevronRightIcon } from './chevron-right-icon';
 export { default as TomatoRatingIcon } from './tomato-icon';
 export { default as ImdbIcon } from './imdb-icon';
+export { default as FavoriteIcon } from './favorite-icon';
+export { default as TvSeriesBadgeIcon } from './series-badge-icon';

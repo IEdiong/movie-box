@@ -16,7 +16,6 @@ const Heading = defineStyleConfig({
     'h1-sm': {
       fontSize: '4xl',
       lineHeight: '40px',
-      // letterSpacing: '1.286px',
     },
     h2: {
       fontSize: '4xl',
@@ -25,7 +24,9 @@ const Heading = defineStyleConfig({
     },
     'h2-sm': {
       fontSize: '3xl',
-      // letterSpacing: '1px',
+    },
+    h3: {
+      fontSize: 'lg',
     },
   },
   // The default `size` or `variant` values
