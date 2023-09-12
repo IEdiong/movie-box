@@ -5,3 +5,5 @@ export { default as YoutubeIcon } from './youtube-icon';
 export { default as PlayIcon } from './play-icon';
 export { default as SearchIcon } from './search-icon';
 export { default as ChevronRightIcon } from './chevron-right-icon';
+export { default as TomatoRatingIcon } from './tomato-icon';
+export { default as ImdbIcon } from './imdb-icon';

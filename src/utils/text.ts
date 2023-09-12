@@ -5,7 +5,7 @@ const Text = defineStyleConfig({
 
   // Styles for the visual style variations
   variants: {
-    xsmall: {
+    xs: {
       fontSize: 'xs',
       fontWeight: 'normal',
       lineHeight: '12px',

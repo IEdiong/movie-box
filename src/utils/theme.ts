@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
 import Heading from './heading';
 import Container from './container';
+import Text from './text';
 
 // Colors
 const colors = {
@@ -45,6 +46,7 @@ export const theme = extendTheme({
   components: {
     Heading,
     Container,
+    Text,
   },
   config: {
     cssVarPrefix: 'mdb',

@@ -2,11 +2,12 @@ import {
   Box,
   Button,
   Container,
+  HStack,
   Heading,
   Text,
   VStack,
 } from '@/utils/chakra-components';
-import { PlayIcon } from './icons';
+import { ImdbIcon, PlayIcon, TomatoRatingIcon } from './icons';
 import Navbar from './navbar';
 
 export default function Header() {
@@ -30,6 +31,16 @@ export default function Header() {
           <Heading as='h1' variant='h1'>
             John Wick 3 : Parabellum
           </Heading>
+          <HStack spacing='34px' align='center'>
+            <HStack spacing='10px' align='center'>
+              <ImdbIcon w='35px' />
+              <Text fontSize='xs'>86.0 / 100</Text>
+            </HStack>
+            <HStack spacing='10px' align='center'>
+              <TomatoRatingIcon w='17px' />
+              <Text fontSize='xs'>97%</Text>
+            </HStack>
+          </HStack>
           <Text
             w={{ lg: '345px' }}
             fontWeight='medium'
