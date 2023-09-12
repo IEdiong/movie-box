@@ -71,6 +71,9 @@ import {
   useRadioGroup,
   useStyleConfig,
   FormErrorMessage,
+  Skeleton,
+  SkeletonCircle,
+  SkeletonText,
 } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/next-js';
 
@@ -134,6 +137,9 @@ export {
   EditableInput,
   Avatar,
   AvatarBadge,
+  Skeleton,
+  SkeletonCircle,
+  SkeletonText,
   FormErrorMessage,
   useStyleConfig,
   AccordionIcon,
