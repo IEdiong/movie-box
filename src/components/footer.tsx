@@ -10,7 +10,12 @@ import { FacebookIcon, InstagramIcon, TwitterIcon, YoutubeIcon } from './icons';
 
 export default function Footer() {
   return (
-    <Flex justify='center' align='center' pb='74px'>
+    <Flex
+      as='footer'
+      justify='center'
+      align='center'
+      pb={{ base: '44px', md: '74px' }}
+    >
       <VStack spacing='36px' fontWeight='bold' fontSize='lg'>
         <HStack
           as='ul'
@@ -24,10 +29,11 @@ export default function Footer() {
           <TwitterIcon boxSize='28px' />
           <YoutubeIcon boxSize='28px' />
         </HStack>
-        <HStack
+        <Flex
           as='ul'
+          flexDir={{ base: 'column', md: 'row' }}
           listStyleType='none'
-          spacing='12'
+          gap={{ base: '8', md: '12' }}
           align='center'
           justify='space-between'
           color='mdb.gray.900'
@@ -62,7 +68,7 @@ export default function Footer() {
               Press Room
             </Link>
           </Box>
-        </HStack>
+        </Flex>
         <Text color='mdb.gray.500'>
           © 2021 MovieBox by Adriana Eka Prayudha{' '}
         </Text>
