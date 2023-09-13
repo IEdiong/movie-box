@@ -2,7 +2,6 @@ import { Grid, GridItem, Skeleton } from '@/utils/chakra-components';
 import MovieCard from '@/components/movie-card';
 import { Movie } from '@/types/movie';
 
-// const movies = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const url =
   'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
 
@@ -30,6 +29,7 @@ async function getMovies(url: string) {
 
 export default async function FeaturedMovies() {
   const { results: movies } = await getMovies(url);
+
   return (
     <Grid
       as='ul'
@@ -49,6 +49,7 @@ export default async function FeaturedMovies() {
             movieTitle={movie.title}
             movieRating={movie.vote_average}
             releaseDate={movie.release_date}
+            movieId={movie.id}
           />
         </GridItem>
       ))}

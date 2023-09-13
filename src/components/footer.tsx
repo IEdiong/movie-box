@@ -37,6 +37,7 @@ export default function Footer() {
           align='center'
           justify='space-between'
           color='mdb.gray.900'
+          fontSize={{ base: 'sm', md: 'md' }}
         >
           <Box as='li'>
             <Link
@@ -69,7 +70,7 @@ export default function Footer() {
             </Link>
           </Box>
         </Flex>
-        <Text color='mdb.gray.500'>
+        <Text color='mdb.gray.500' fontSize={{ base: 'sm', md: 'md' }}>
           © 2021 MovieBox by Adriana Eka Prayudha{' '}
         </Text>
       </VStack>

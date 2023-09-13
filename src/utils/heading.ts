@@ -23,7 +23,7 @@ const Heading = defineStyleConfig({
       fontStyle: 'normal',
     },
     'h2-sm': {
-      fontSize: '3xl',
+      fontSize: 'xl',
     },
     h3: {
       fontSize: 'lg',

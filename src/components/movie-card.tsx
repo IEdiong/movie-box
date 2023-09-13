@@ -15,6 +15,7 @@ import {
 } from './icons';
 
 type MovieCardProps = {
+  movieId: number;
   moviePoster: string;
   movieTitle: string;
   movieRating: number;
@@ -22,6 +23,7 @@ type MovieCardProps = {
 };
 
 export default function MovieCard({
+  movieId,
   moviePoster,
   movieTitle,
   movieRating,
@@ -39,7 +41,7 @@ export default function MovieCard({
     <Box
       h='490px'
       as={Link}
-      href='#'
+      href={`/${movieId}`}
       _hover={{ textDecor: 'none' }}
       data-testid='movie-card'
     >
