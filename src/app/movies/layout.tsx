@@ -1,5 +1,5 @@
 import Footer from '@/components/footer';
-import Navbar from '@/components/navbar';
+import Navbar from './_components/movie-navbar';
 
 export default function MoviesLayout({
   children,

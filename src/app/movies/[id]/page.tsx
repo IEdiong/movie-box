@@ -25,9 +25,10 @@ export default async function MovieDetial({
   return (
     <Fragment>
       <Box
-        minH={{ md: '449px' }}
-        // overflow='hidden'
-        backgroundColor='mdb.black.900'
+        maxH={{ md: '449px' }}
+        overflow='hidden'
+        bgColor='mdb.black.900'
+        bgPos='center'
       >
         <Image src={backdropPath} alt={movie.title} objectFit='fill' />
       </Box>

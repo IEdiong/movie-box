@@ -8,6 +8,7 @@ const colors = {
   mdb: {
     rose: {
       700: '#BE123C',
+      900: '#881337',
     },
     gray: {
       400: '#9CA3AF',
