@@ -41,7 +41,7 @@ export default function MovieCard({
     <Box
       h='490px'
       as={Link}
-      href={`/movie/${movieId}`}
+      href={`/movies/${movieId}`}
       _hover={{ textDecor: 'none' }}
       data-testid='movie-card'
     >
@@ -84,7 +84,6 @@ export default function MovieCard({
           data-testid='movie-title'
         >
           {movieTitle}
-          {/* Spider-Man : Into The Spider Verse */}
         </Heading>
         <HStack
           spacing='34px'

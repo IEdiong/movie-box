@@ -7,4 +7,6 @@ export type Movie = {
   vote_count: number;
   genre_ids: number[];
   release_date: string;
+  runtime: number;
+  overview: string;
 };

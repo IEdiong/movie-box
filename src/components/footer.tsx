@@ -14,7 +14,7 @@ export default function Footer() {
       as='footer'
       justify='center'
       align='center'
-      pb={{ base: '44px', md: '74px' }}
+      paddingBlock={{ base: '44px', md: '74px' }}
     >
       <VStack spacing='36px' fontWeight='bold' fontSize='lg'>
         <HStack

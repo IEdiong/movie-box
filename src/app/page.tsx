@@ -1,6 +1,5 @@
 import { Fragment, Suspense } from 'react';
 import FeaturedMovies from '@/components/featured-movies';
-import Footer from '@/components/footer';
 import Header from '@/components/header';
 import { ChevronRightIcon } from '@/components/icons';
 import {
@@ -36,7 +35,6 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
-      <Footer />
     </Fragment>
   );
 }
