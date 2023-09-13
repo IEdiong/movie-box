@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 export default function Loading() {
   return (
     <Fragment>
-      <Skeleton h='449px' />
+      <Skeleton h={{ base: '280px', md: '449px' }} />
       <Box pt={{ base: '8', md: '16' }} pb='16'>
         <Container>
           <Flex gap='12'>
@@ -22,9 +22,20 @@ export default function Loading() {
               <Skeleton h='full' />
             </Box>
             <Box w='800px'>
-              <SkeletonText skeletonHeight={4} />
-              <SkeletonText skeletonHeight={6} mt='4' />
-              <SkeletonText skeletonHeight={4} noOfLines={3} mt='4' />
+              <Skeleton height='40px' width='35ch' />
+              <SkeletonText skeletonHeight={4} noOfLines={3} mt='8' />
+              <SkeletonText
+                skeletonHeight={4}
+                noOfLines={1}
+                mt='4'
+                width='300px'
+              />
+              <SkeletonText
+                skeletonHeight={4}
+                noOfLines={1}
+                mt='4'
+                width='100px'
+              />
             </Box>
           </Flex>
         </Container>

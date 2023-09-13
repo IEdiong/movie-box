@@ -20,9 +20,8 @@ export default async function FeaturedMovies() {
       gridColumnGap={{ base: '40px', lg: '70px' }}
       justifyContent='space-between'
     >
-      {movies.map((movie: Movie) => (
+      {movies.slice(0, 10).map((movie: Movie) => (
         <GridItem as='li' key={movie.id}>
-          {/* <Skeleton h='490px' /> */}
           <MovieCard
             moviePoster={movie.poster_path}
             movieTitle={movie.title}

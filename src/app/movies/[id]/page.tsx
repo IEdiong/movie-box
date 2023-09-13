@@ -22,6 +22,8 @@ export default async function MovieDetial({
 
   const backdropPath = `https://image.tmdb.org/t/p/original${movie.backdrop_path}`;
   const moviePosterPath = `https://image.tmdb.org/t/p/original${movie.poster_path}`;
+  const releaseDateUtc = new Date(movie.release_date + 'T00:00:00Z');
+  const utcString = releaseDateUtc.toISOString();
 
   return (
     <Fragment>
@@ -31,7 +33,7 @@ export default async function MovieDetial({
         bgColor='mdb.black.900'
         bgPos='center'
       >
-        <Image src={backdropPath} alt={movie.title} objectFit='fill' />
+        <Image src={backdropPath} alt={movie.title} objectFit='fill' w='full' />
       </Box>
       <Box pt={{ base: '8', md: '16' }} pb='16'>
         <Container>
@@ -55,13 +57,22 @@ export default async function MovieDetial({
             <VStack spacing='4' align='flex-start'>
               <Heading data-testid='movie-title'>{movie.title}</Heading>
               <Text data-testid='movie-overview'>{movie.overview}</Text>
-              <Text variant='sm'>
+              <Text variant='sm' fontWeight='bold'>
                 Release date:{' '}
-                <span data-testid='movie-release-date'>
-                  {movie.release_date}
-                </span>
+                <Box
+                  as='span'
+                  fontWeight='normal'
+                  data-testid='movie-release-date'
+                >
+                  {utcString}
+                </Box>
               </Text>
-              <Text data-testid='movie-runtime'>{movie.runtime}</Text>
+              <Text variant='sm' fontWeight='bold'>
+                Runtime:{' '}
+                <Box as='span' fontWeight='normal' data-testid='movie-runtime'>
+                  {movie.runtime} mins
+                </Box>
+              </Text>
             </VStack>
           </Flex>
         </Container>
