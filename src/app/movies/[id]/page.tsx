@@ -28,7 +28,7 @@ export default async function MovieDetial({
   return (
     <Fragment>
       <Box
-        h={{ base: '280px', md: '449px' }}
+        h={{ base: '200px', sm: '280px', md: '449px' }}
         overflow='hidden'
         bgColor='mdb.black.900'
         bgPos='center'
