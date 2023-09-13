@@ -1,31 +1,10 @@
 import { Grid, GridItem, Skeleton } from '@/utils/chakra-components';
 import MovieCard from '@/components/movie-card';
 import { Movie } from '@/types/movie';
+import getMovies from '@/libs/custom-fetch';
 
 const url =
   'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
-
-async function getMovies(url: string) {
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${process.env.BEARER_TOKEN}`,
-    },
-  };
-
-  const res = await fetch(url, options);
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data');
-  }
-
-  const result = res.json();
-  // console.log(result);
-
-  return result;
-}
 
 export default async function FeaturedMovies() {
   const { results: movies } = await getMovies(url);

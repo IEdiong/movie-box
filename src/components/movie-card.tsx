@@ -41,7 +41,7 @@ export default function MovieCard({
     <Box
       h='490px'
       as={Link}
-      href={`/${movieId}`}
+      href={`/movie/${movieId}`}
       _hover={{ textDecor: 'none' }}
       data-testid='movie-card'
     >
