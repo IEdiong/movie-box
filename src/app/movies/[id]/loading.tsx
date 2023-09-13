@@ -1,21 +1,34 @@
-import { Box, Heading, Text } from '@/utils/chakra-components';
+import {
+  Box,
+  Container,
+  Flex,
+  Skeleton,
+  SkeletonText,
+} from '@/utils/chakra-components';
+import { Fragment } from 'react';
 
 export default function Loading() {
-  return <h1>loading...</h1>;
-}
-
-{
-  /* <Box
-        as='header'
-        h={{ lg: '449px' }}
-        overflow='hidden'
-        backgroundColor='mdb.black.900'
-      ></Box>
-      <Box as='main'>
-        <h1></h1>
-        <Heading data-testid='movie-title'></Heading>
-        <Text data-testid='movie-release-date'></Text>
-        <Text data-testid='movie-runtime'></Text>
-        <Text data-testid='movie-overview'></Text>
-      </Box> */
+  return (
+    <Fragment>
+      <Skeleton h='449px' />
+      <Box pt={{ base: '8', md: '16' }} pb='16'>
+        <Container>
+          <Flex gap='12'>
+            <Box
+              w='250px'
+              aspectRatio={'4 / 6'}
+              display={{ base: 'none', md: 'block' }}
+            >
+              <Skeleton h='full' />
+            </Box>
+            <Box w='800px'>
+              <SkeletonText skeletonHeight={4} />
+              <SkeletonText skeletonHeight={6} mt='4' />
+              <SkeletonText skeletonHeight={4} noOfLines={3} mt='4' />
+            </Box>
+          </Flex>
+        </Container>
+      </Box>
+    </Fragment>
+  );
 }

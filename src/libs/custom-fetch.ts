@@ -1,3 +1,5 @@
+import { Movie } from '@/types/movie';
+
 export default async function getMovies(url: string) {
   const options = {
     method: 'GET',
@@ -15,7 +17,12 @@ export default async function getMovies(url: string) {
   }
 
   const result = res.json();
+  const updatedResult: Promise<Movie> = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      return resolve(result);
+    }, 3000);
+  });
   // console.log(result);
 
-  return result;
+  return updatedResult;
 }
