@@ -15,7 +15,12 @@ export default async function MovieDetial({
 
   return (
     <Fragment>
-      <Box as='header' h={{ lg: '449px' }} overflow='hidden'>
+      <Box
+        as='header'
+        h={{ lg: '449px' }}
+        overflow='hidden'
+        backgroundColor='mdb.black.900'
+      >
         <Image src={moviePosterPath} alt={movie.title} objectFit='cover' />
       </Box>
       <Box as='main'>

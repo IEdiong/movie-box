@@ -2,7 +2,6 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
 import { Providers } from './providers';
-import Footer from '@/components/footer';
 
 const dmSans = DM_Sans({ subsets: ['latin'] });
 
@@ -20,8 +19,6 @@ export default function RootLayout({
     <html lang='en'>
       <body className={dmSans.className}>
         <Providers>{children}</Providers>
-
-        <Footer />
       </body>
     </html>
   );

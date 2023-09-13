@@ -9,6 +9,7 @@ import {
   Heading,
   Link,
 } from '@/utils/chakra-components';
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (
@@ -17,16 +18,16 @@ export default function Home() {
       <Box as='main' pt={{ base: '50px', md: '70px' }} pb={{ base: '144px' }}>
         <Container>
           <HStack justify='space-between' align='center'>
-            <Heading as='h2' variant={{ base: 'h2-sm', md: 'h2' }}>
+            <Heading as='h2' variant={{ base: 'h2-sm', sm: 'h2' }}>
               Featured Movies
             </Heading>
             <Link
               href='/'
               color='mdb.rose.700'
-              fontSize={{ base: 'xs', md: 'md' }}
+              fontSize={{ base: 'xs', sm: 'md' }}
             >
               See more
-              <ChevronRightIcon boxSize={{ base: '16px', md: '20px' }} />
+              <ChevronRightIcon boxSize={{ base: '16px', sm: '20px' }} />
             </Link>
           </HStack>
 
@@ -35,6 +36,7 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
+      <Footer />
     </Fragment>
   );
 }

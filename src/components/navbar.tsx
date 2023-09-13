@@ -12,6 +12,7 @@ import SearchBar from './search-bar';
 export default function Navbar() {
   return (
     <Box
+      as='nav'
       bg='transparent'
       py='15px'
       pos='absolute'
