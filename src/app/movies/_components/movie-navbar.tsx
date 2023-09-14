@@ -11,13 +11,13 @@ import SearchBar from '@/components/search-bar';
 
 export default function Navbar() {
   return (
-    <Box as='nav' bg='mdb.rose.900' color='mdb.white' py='15px' w='full'>
+    <Box as="nav" bg="mdb.rose.900" color="mdb.white" py="15px" w="full">
       <Container>
-        <HStack justify='space-between'>
-          <Link href='/'>
+        <HStack justify="space-between">
+          <Link href="/">
             <Image
-              src='/logo.svg'
-              alt=''
+              src="/logo.svg"
+              alt=""
               w={{ base: '150px', md: 'max-content' }}
             />
           </Link>
@@ -27,25 +27,25 @@ export default function Navbar() {
           >
             <SearchBar />
           </Box>
-          <HStack spacing='27px'>
+          <HStack spacing="27px">
             <Link
-              href='/'
-              fontSize='md'
-              fontWeight='bold'
-              lineHeight='24px'
-              color='mdb.white'
+              href="/"
+              fontSize="md"
+              fontWeight="bold"
+              lineHeight="24px"
+              color="mdb.white"
             >
               Sign in
             </Link>
             <Button
-              p='0'
-              minW='28px'
-              bg='transparent'
+              p="0"
+              minW="28px"
+              bg="transparent"
               _hover={{
                 backgroundColor: 'transparent',
               }}
             >
-              <HamburgerIcon boxSize='36px' />
+              <HamburgerIcon boxSize="36px" />
             </Button>
           </HStack>
         </HStack>

@@ -29,20 +29,20 @@ export default async function MovieDetial({
     <Fragment>
       <Box
         h={{ base: '200px', sm: '280px', md: '449px' }}
-        overflow='hidden'
-        bgColor='mdb.black.900'
-        bgPos='center'
+        overflow="hidden"
+        bgColor="mdb.black.900"
+        bgPos="center"
       >
-        <Image src={backdropPath} alt={movie.title} objectFit='fill' w='full' />
+        <Image src={backdropPath} alt={movie.title} objectFit="fill" w="full" />
       </Box>
-      <Box pt={{ base: '8', md: '16' }} pb='16'>
+      <Box pt={{ base: '8', md: '16' }} pb="16">
         <Container>
-          <Flex gap='12'>
+          <Flex gap="12">
             <Box
-              w='250px'
+              w="250px"
               aspectRatio={'4 / 6'}
               display={{ base: 'none', md: 'block' }}
-              pos='relative'
+              pos="relative"
               flexBasis={'250px'}
               flexShrink={'0'}
               flexGrow={'1'}
@@ -50,26 +50,26 @@ export default async function MovieDetial({
               <Image
                 src={moviePosterPath}
                 alt={movie.title}
-                w='full'
-                objectFit='contain'
+                w="full"
+                objectFit="contain"
               />
             </Box>
-            <VStack spacing='4' align='flex-start'>
-              <Heading data-testid='movie-title'>{movie.title}</Heading>
-              <Text data-testid='movie-overview'>{movie.overview}</Text>
-              <Text variant='sm' fontWeight='bold'>
+            <VStack spacing="4" align="flex-start">
+              <Heading data-testid="movie-title">{movie.title}</Heading>
+              <Text data-testid="movie-overview">{movie.overview}</Text>
+              <Text variant="sm" fontWeight="bold">
                 Release date:{' '}
                 <Box
-                  as='span'
-                  fontWeight='normal'
-                  data-testid='movie-release-date'
+                  as="span"
+                  fontWeight="normal"
+                  data-testid="movie-release-date"
                 >
                   {utcString}
                 </Box>
               </Text>
-              <Text variant='sm' fontWeight='bold'>
+              <Text variant="sm" fontWeight="bold">
                 Runtime:{' '}
-                <Box as='span' fontWeight='normal' data-testid='movie-runtime'>
+                <Box as="span" fontWeight="normal" data-testid="movie-runtime">
                   {movie.runtime} mins
                 </Box>
               </Text>

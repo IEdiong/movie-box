@@ -39,73 +39,73 @@ export default function MovieCard({
 
   return (
     <Box
-      h='490px'
+      h="490px"
       as={Link}
       href={`/movies/${movieId}`}
       _hover={{ textDecor: 'none' }}
-      data-testid='movie-card'
+      data-testid="movie-card"
     >
-      <Box minH='370px' aspectRatio={'4 / 6'} pos='relative'>
+      <Box minH="370px" aspectRatio={'4 / 6'} pos="relative">
         <HStack
-          justify='space-between'
-          align='center'
-          p='4'
-          pos='absolute'
-          w='full'
-          left='0'
-          top='0'
+          justify="space-between"
+          align="center"
+          p="4"
+          pos="absolute"
+          w="full"
+          left="0"
+          top="0"
         >
-          <TvSeriesBadgeIcon visibility='hidden' />
-          <FavoriteIcon zIndex='4' />
+          <TvSeriesBadgeIcon visibility="hidden" />
+          <FavoriteIcon zIndex="4" />
         </HStack>
 
         <Image
           src={moviePosterPath}
-          objectFit='cover'
+          objectFit="cover"
           alt={movieTitle}
-          data-testid='movie-poster'
+          data-testid="movie-poster"
         />
       </Box>
-      <VStack align='flex-start' justify='space-between' spacing='3' mt='3'>
+      <VStack align="flex-start" justify="space-between" spacing="3" mt="3">
         <Text
-          variant='xs'
-          color='mdb.gray.400'
-          fontWeight='bold'
-          lineHeight='normal'
+          variant="xs"
+          color="mdb.gray.400"
+          fontWeight="bold"
+          lineHeight="normal"
         >
-          USA, <span data-testid='movie-release-date'>{releaseYear}</span>
+          USA, <span data-testid="movie-release-date">{releaseYear}</span>
           {releaseYear === currentYear ? ' - Current' : null}
         </Text>
         <Heading
-          as='h3'
-          variant='h3'
-          color='mdb.gray.900'
+          as="h3"
+          variant="h3"
+          color="mdb.gray.900"
           noOfLines={1}
-          data-testid='movie-title'
+          data-testid="movie-title"
         >
           {movieTitle}
         </Heading>
         <HStack
-          spacing='34px'
-          align='center'
-          justify='space-between'
-          w='full'
-          color='mdb.gray.900'
+          spacing="34px"
+          align="center"
+          justify="space-between"
+          w="full"
+          color="mdb.gray.900"
         >
-          <HStack spacing='10px' align='center'>
-            <ImdbIcon w='35px' />
-            <Text fontSize='xs'>{movieRating.toFixed(2)} / 100</Text>
+          <HStack spacing="10px" align="center">
+            <ImdbIcon w="35px" />
+            <Text fontSize="xs">{movieRating.toFixed(2)} / 100</Text>
           </HStack>
-          <HStack spacing='10px' align='center'>
-            <TomatoRatingIcon w='17px' />
-            <Text fontSize='xs'>97%</Text>
+          <HStack spacing="10px" align="center">
+            <TomatoRatingIcon w="17px" />
+            <Text fontSize="xs">97%</Text>
           </HStack>
         </HStack>
         <Text
-          variant='xs'
-          color='mdb.gray.400'
-          fontWeight='bold'
-          lineHeight='normal'
+          variant="xs"
+          color="mdb.gray.400"
+          fontWeight="bold"
+          lineHeight="normal"
         >
           Action, Adventure, Horror
         </Text>

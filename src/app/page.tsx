@@ -1,4 +1,4 @@
-import { Fragment, Suspense } from 'react';
+import { Fragment } from 'react';
 import FeaturedMovies from '@/components/featured-movies';
 import Header from '@/components/header';
 import { ChevronRightIcon } from '@/components/icons';
@@ -15,15 +15,15 @@ export default function Home() {
   return (
     <Fragment>
       <Header />
-      <Box as='main' pt={{ base: '50px', md: '70px' }} pb={{ base: '144px' }}>
+      <Box as="main" pt={{ base: '50px', md: '70px' }} pb={{ base: '144px' }}>
         <Container>
-          <HStack justify='space-between' align='center'>
-            <Heading as='h2' variant={{ base: 'h2-sm', sm: 'h2' }}>
+          <HStack justify="space-between" align="center">
+            <Heading as="h2" variant={{ base: 'h2-sm', sm: 'h2' }}>
               Featured Movies
             </Heading>
             <Link
-              href='/'
-              color='mdb.rose.700'
+              href="/"
+              color="mdb.rose.700"
               fontSize={{ base: 'xs', sm: 'md' }}
             >
               See more

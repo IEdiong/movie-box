@@ -7,9 +7,9 @@ import { SearchIcon } from './icons';
 
 export default function SearchBar() {
   return (
-    <InputGroup py='6px' px='10px'>
+    <InputGroup py="6px" px="10px">
       <Input
-        placeholder='What do you want to watch?'
+        placeholder="What do you want to watch?"
         _placeholder={{
           color: 'mdb.white',
           fontSize: 'md',
@@ -21,8 +21,8 @@ export default function SearchBar() {
           boxShadow: '0 0 0 1px #BE123C',
         }}
       />
-      <InputRightElement h='full' me='10px'>
-        <SearchIcon boxSize='16px' />
+      <InputRightElement h="full" me="10px">
+        <SearchIcon boxSize="16px" />
       </InputRightElement>
     </InputGroup>
   );

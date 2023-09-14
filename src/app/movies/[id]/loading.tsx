@@ -11,30 +11,30 @@ export default function Loading() {
   return (
     <Fragment>
       <Skeleton h={{ base: '200px', md: '449px' }} />
-      <Box pt={{ base: '8', md: '16' }} pb='16'>
+      <Box pt={{ base: '8', md: '16' }} pb="16">
         <Container>
-          <Flex gap='12'>
+          <Flex gap="12">
             <Box
-              w='250px'
+              w="250px"
               aspectRatio={'4 / 6'}
               display={{ base: 'none', md: 'block' }}
             >
-              <Skeleton h='full' />
+              <Skeleton h="full" />
             </Box>
-            <Box w='800px'>
-              <Skeleton height='40px' width={{ base: '20ch', md: '35ch' }} />
-              <SkeletonText skeletonHeight={4} noOfLines={3} mt='8' />
+            <Box w="800px">
+              <Skeleton height="40px" width={{ base: '20ch', md: '35ch' }} />
+              <SkeletonText skeletonHeight={4} noOfLines={3} mt="8" />
               <SkeletonText
                 skeletonHeight={4}
                 noOfLines={1}
-                mt='4'
+                mt="4"
                 width={{ base: '100px', md: '300px' }}
               />
               <SkeletonText
                 skeletonHeight={4}
                 noOfLines={1}
-                mt='4'
-                width='100px'
+                mt="4"
+                width="100px"
               />
             </Box>
           </Flex>

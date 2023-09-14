@@ -1,4 +1,4 @@
-import { Grid, GridItem, Skeleton } from '@/utils/chakra-components';
+import { Grid, GridItem } from '@/utils/chakra-components';
 import MovieCard from '@/components/movie-card';
 import { Movie } from '@/types/movie';
 import getMovies from '@/libs/custom-fetch';
@@ -11,17 +11,17 @@ export default async function FeaturedMovies() {
 
   return (
     <Grid
-      as='ul'
-      listStyleType='none'
+      as="ul"
+      listStyleType="none"
       gridTemplateColumns={{
         base: 'repeat(auto-fill, minmax(250px, 1fr))',
       }}
       gridRowGap={{ base: '8', md: '103px' }}
       gridColumnGap={{ base: '40px', lg: '70px' }}
-      justifyContent='space-between'
+      justifyContent="space-between"
     >
       {movies.slice(0, 10).map((movie: Movie) => (
-        <GridItem as='li' key={movie.id}>
+        <GridItem as="li" key={movie.id}>
           <MovieCard
             moviePoster={movie.poster_path}
             movieTitle={movie.title}
