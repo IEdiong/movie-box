@@ -7,12 +7,8 @@ import {
   Link,
   Image,
 } from '@/utils/chakra-components';
-import {
-  FavoriteIcon,
-  ImdbIcon,
-  TomatoRatingIcon,
-  TvSeriesBadgeIcon,
-} from './icons';
+import { ImdbIcon, TomatoRatingIcon, TvSeriesBadgeIcon } from './icons';
+import FavIcon from './fav-icon';
 
 type MovieCardProps = {
   movieId: number;
@@ -83,7 +79,7 @@ export default function MovieCard({
           top="0"
         >
           <TvSeriesBadgeIcon visibility="hidden" />
-          <FavoriteIcon zIndex="4" />
+          <FavIcon />
         </HStack>
 
         <Image
