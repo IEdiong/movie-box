@@ -65,6 +65,12 @@ export default function Header() {
             fontWeight="bold"
             lineHeight="24px"
             gap="2"
+            transition=".4s ease-out"
+            _hover={{
+              color: 'mdb.rose.700',
+              bgColor: 'mdb.white',
+              borderRadius: 'none',
+            }}
           >
             <PlayIcon boxSize="20px" />
             Watch trailer
