@@ -16,9 +16,17 @@ export default function Navbar() {
         <HStack justify="space-between">
           <Link href="/">
             <Image
+              src="/logo.png"
+              alt=""
+              w={{ base: '40px', md: '0' }}
+              h={{ base: '40px', md: '0' }}
+              display={{ base: 'block', md: 'none' }}
+            />
+            <Image
               src="/logo.svg"
               alt=""
-              w={{ base: '150px', md: 'max-content' }}
+              w={{ base: 'none', md: 'max-content' }}
+              display={{ base: 'none', md: 'block' }}
             />
           </Link>
           <Box
@@ -34,6 +42,7 @@ export default function Navbar() {
               fontWeight="bold"
               lineHeight="24px"
               color="mdb.white"
+              display={{ base: 'none', md: 'block' }}
             >
               Sign in
             </Link>

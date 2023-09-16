@@ -24,9 +24,17 @@ export default function Navbar() {
       <Container>
         <HStack justify="space-between">
           <Image
+            src="/logo.png"
+            alt=""
+            w={{ base: '40px', md: '0' }}
+            h={{ base: '40px', md: '0' }}
+            display={{ base: 'block', md: 'none' }}
+          />
+          <Image
             src="/logo.svg"
             alt=""
-            w={{ base: '150px', md: 'max-content' }}
+            w={{ md: 'max-content' }}
+            display={{ base: 'none', md: 'block' }}
           />
           <Box
             minW={{ sm: '300px', md: '505px' }}
@@ -35,7 +43,13 @@ export default function Navbar() {
             <SearchBar />
           </Box>
           <HStack spacing="27px">
-            <Link href="/" fontSize="md" fontWeight="bold" lineHeight="24px">
+            <Link
+              href="/"
+              fontSize="md"
+              fontWeight="bold"
+              lineHeight="24px"
+              display={{ base: 'none', md: 'block' }}
+            >
               Sign in
             </Link>
             <Button
