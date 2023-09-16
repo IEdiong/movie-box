@@ -18,9 +18,8 @@ export default async function getMovies(url: string) {
   const updatedResult: Promise<any> = new Promise((resolve, _reject) => {
     setTimeout(() => {
       return resolve(result);
-    }, 3000);
+    }, 1000);
   });
-  // console.log(result);
 
   return updatedResult;
 }
