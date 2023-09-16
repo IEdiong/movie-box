@@ -39,13 +39,40 @@ export default function MovieCard({
 
   return (
     <Box
-      h="490px"
       as={Link}
       href={`/movies/${movieId}`}
-      _hover={{ textDecor: 'none' }}
+      display="block"
+      pos="relative"
+      _hover={{
+        textDecor: 'none',
+      }}
+      className="movie-card"
       data-testid="movie-card"
     >
-      <Box minH="370px" aspectRatio={'4 / 6'} pos="relative">
+      <Box
+        minH="370px"
+        aspectRatio={'4 / 6'}
+        pos="relative"
+        overflow="hidden"
+        transition=".3s ease-out"
+        sx={{
+          '&::after': {
+            content: "''",
+            transition: '.2s ease-out',
+            transitionProperty: 'background-color',
+          },
+          '.movie-card:hover &::after': {
+            content: "''",
+            position: 'absolute',
+            top: '0',
+            left: '0',
+            width: 'full',
+            height: 'full',
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            pointerEvents: 'none',
+          },
+        }}
+      >
         <HStack
           justify="space-between"
           align="center"
@@ -63,6 +90,12 @@ export default function MovieCard({
           src={moviePosterPath}
           objectFit="cover"
           alt={movieTitle}
+          transition=".3s ease-in-out"
+          sx={{
+            '.movie-card:hover &': {
+              transform: 'scale(1.1)',
+            },
+          }}
           data-testid="movie-poster"
         />
       </Box>
@@ -81,6 +114,12 @@ export default function MovieCard({
           variant="h3"
           color="mdb.gray.900"
           noOfLines={1}
+          transition=".3s ease-in-out"
+          sx={{
+            '.movie-card:hover &': {
+              color: 'mdb.rose.700',
+            },
+          }}
           data-testid="movie-title"
         >
           {movieTitle}

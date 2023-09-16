@@ -21,7 +21,7 @@ export default async function FeaturedMovies() {
       justifyContent="space-between"
     >
       {movies.slice(0, 10).map((movie: Movie) => (
-        <GridItem as="li" key={movie.id}>
+        <GridItem as="li" key={movie.id} pos="relative">
           <MovieCard
             moviePoster={movie.poster_path}
             movieTitle={movie.title}
